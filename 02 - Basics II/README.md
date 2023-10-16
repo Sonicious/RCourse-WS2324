@@ -127,9 +127,9 @@ add(y = 4, x = 5)
 - get familiar with the functions `cat` and `print` and `paste0`.
 - write a function which has the input of a radius of a circle and
   prints the values for area and circumference. Return a simple 0.
-- Write a second function which returns the values as vector wihtout
+- Write a second function which returns the values as vector without
   printing anything.
-- Check if you named the variables and the funciton wisely and if you
+- Check if you named the variables and the function wisely and if you
   used comments.
 
 # Variable scope / R Environment
@@ -322,7 +322,7 @@ while (number <- sample(1:10, 1)) {
 }
 ```
 
-    ## [1] "Found number 5 after 2 Iterations: "
+    ## [1] "Found number 5 after 4 Iterations: "
 
 ``` r
 x <- 1:5
@@ -448,4 +448,4 @@ $$F_0 = 0,\qquad F_1 = 1,\qquad F_n = F_{n-1} + F_{n-2}$$
   ```
 
       ##        User      System verstrichen 
-      ##        0.41        0.02        0.78
+      ##        0.25        0.02        0.74

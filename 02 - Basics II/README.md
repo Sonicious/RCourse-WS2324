@@ -20,7 +20,7 @@ General tips for coding:
 - Good code can be read like a good book!
 - Usual styleguide:
   - variables and functions are all written in lowercase with
-    underscores if neded
+    underscores if needed
   - Examples: `circle_volume`, `matrix_product`, but not: `MyFunction`
 - **Combine simplicity with efficiency!**
 
@@ -126,7 +126,7 @@ add(y = 4, x = 5)
 
 - get familiar with the functions `cat` and `print` and `paste0`.
 - write a function which has the input of a radius of a circle and
-  prints the values for volume and area. Return a simple 0.
+  prints the values for area and circumference. Return a simple 0.
 - Write a second function which returns the values as vector wihtout
   printing anything.
 - Check if you named the variables and the funciton wisely and if you
@@ -322,7 +322,7 @@ while (number <- sample(1:10, 1)) {
 }
 ```
 
-    ## [1] "Found number 5 after 9 Iterations: "
+    ## [1] "Found number 5 after 2 Iterations: "
 
 ``` r
 x <- 1:5
@@ -448,4 +448,4 @@ $$F_0 = 0,\qquad F_1 = 1,\qquad F_n = F_{n-1} + F_{n-2}$$
   ```
 
       ##        User      System verstrichen 
-      ##        0.35        0.00        0.36
+      ##        0.41        0.02        0.78

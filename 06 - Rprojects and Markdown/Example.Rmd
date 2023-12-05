@@ -1,8 +1,10 @@
 ---
 title: "Example Document"
-subtitle: "This is an example"
 author: "Martin Reinhardt"
-output: pdf_document
+subtitle: This is an example
+output:
+  html_document:
+    df_print: paged
 ---
 
 # Hello R World 

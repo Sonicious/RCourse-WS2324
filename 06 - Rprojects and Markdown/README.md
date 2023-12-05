@@ -132,7 +132,8 @@ linear model? Don’t care about the statistics too much, but on working
 with the tools.
 
 1.  create a R Project with an according structure
-2.  add a Readme file which explains what the project is for
+2.  add a pure Markdown Readme file `README.md` which explains what the
+    project is for
 3.  add the data to the data folder
 4.  write a function `init_data` which reads all data needed for the
     project

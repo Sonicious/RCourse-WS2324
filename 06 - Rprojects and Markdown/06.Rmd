@@ -90,7 +90,7 @@ A full tutorial on RMarkdown can be found [here](https://rmarkdown.rstudio.com).
 Today there is a combined exercise which brings all techniques together you learned so far. The final result should be a minimal report which states the status of renewable and nuclear energy in different countries based on the WDI data like in our last class. Add some time series plots, plots on maps, Annotated plots and more. Use your imagination! It's about the number of examples and projects parts you add, not the result itself. Maybe you can find a time series where you can add a linear model? Don't care about the statistics too much, but on working with the tools.
 
 1. create a R Project with an according structure
-1. add a Readme file which explains what the project is for
+1. add a pure Markdown Readme file `README.md` which explains what the project is for
 1. add the data to the data folder
 1. write a function `init_data` which reads all data needed for the project
 1. write a function `prepare data` which creates a tibble with all necessary data you need for the final result

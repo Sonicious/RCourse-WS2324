@@ -488,10 +488,24 @@ data %>%
   group_by(Species) %>%
   count %>%
   ggplot() +
-  geom_bar(aes(x=Species))
+  geom_col(aes(x=Species, y=n))
 ```
 
 ![](04_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+
+Here, note how the command `geom_bar` is different to the command
+`geom_col`. Both are bar plots, but `geom_bar` already includes the the
+counting by default. See the help site with `?geom_bar` which describes
+this behaviour.
+
+``` r
+data %>%
+  group_by(Species) %>%
+  ggplot() +
+  geom_bar(aes(x=Species))
+```
+
+![](04_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
 **Exercise**
 

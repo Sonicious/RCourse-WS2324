@@ -243,6 +243,15 @@ data %>%
   group_by(Species) %>%
   count %>%
   ggplot() +
+  geom_col(aes(x=Species, y=n))
+```
+
+Here, note how the command `geom_bar` is different to the command `geom_col`. Both are bar plots, but `geom_bar` already includes the the counting by default. See the help site with `?geom_bar` which describes this behaviour.
+
+```{r}
+data %>%
+  group_by(Species) %>%
+  ggplot() +
   geom_bar(aes(x=Species))
 ```
 

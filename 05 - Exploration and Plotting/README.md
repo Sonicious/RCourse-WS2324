@@ -134,7 +134,7 @@ to access the data by country and year.
 
 ``` r
 wdi_data_piv <- wdi_data_piv_long %>%
-  pivot_wider(id_cols = c("Country Code", "Year"), names_from = "Indicator Code")
+  pivot_wider(id_cols = c('Country Code', 'Year'), names_from = 'Indicator Code')
 ```
 
 This pivoted data is now tidy for exploration and plotting. First we
@@ -143,7 +143,7 @@ want to find a nice indicator in the data to dive deeper into.
 ``` r
 print(wdi_data %>%
   select(`Indicator Code`, `Indicator Name`) %>%
-  filter(str_detect(`Indicator Name`, "CO2 emissions")), n=30)
+  filter(str_detect(`Indicator Name`, 'CO2 emissions')), n=30)
 ```
 
     ## # A tibble: 4,256 × 2
@@ -191,7 +191,7 @@ program.
 ``` r
 description1 <- wdi_data %>% select(`Indicator Code`, `Indicator Name`) %>% unique
 description2 <- wdi_series %>% select(`Series Code`, `Long definition`) %>% unique
-description <- left_join(description1, description2, by = c("Indicator Code" = "Series Code"))
+description <- left_join(description1, description2, by = c('Indicator Code' = 'Series Code'))
 write_csv(description, "DataDescription.csv")
 ```
 
@@ -200,7 +200,7 @@ emissions in kt:
 
 ``` r
 description %>%
-  filter(str_detect(`Indicator Name`, "CO2 emissions")&str_detect(`Indicator Name`, "kt"))
+  filter(str_detect(`Indicator Name`, 'CO2 emissions') & str_detect(`Indicator Name`, 'kt'))
 ```
 
     ## # A tibble: 4 × 3
@@ -212,25 +212,21 @@ description %>%
     ## 4 EN.ATM.CO2E.SF.KT CO2 emissions from solid fuel consumption… Carbon dioxide e…
 
 We are interested in total CO2 emissions in kt. Therefore we will pick
-the first entry save the according code:
+the first entry and save the code:
 
 ``` r
-chosenCode <- description %>%
-  filter(str_detect(`Indicator Name`, "CO2 emissions")&str_detect(`Indicator Name`, "kt")) %>%
-  select(`Indicator Code`) %>%
-  .[[1,1]]
+chosenCode <- 'EN.ATM.CO2E.KT'
 ```
 
-The saved code EN.ATM.CO2E.KT we now use to get more information
+The saved code EN.ATM.CO2E.KT we now use to get more information. The
+function pull is to access
 
 ``` r
 description %>%
   filter(`Indicator Code` == chosenCode) %>%
   select(`Long definition`) %>%
-  .[[1]]
+  pull() -> tt
 ```
-
-    ## [1] "Carbon dioxide emissions are those stemming from the burning of fossil fuels and the manufacture of cement. They include carbon dioxide produced during consumption of solid, liquid, and gas fuels and gas flaring."
 
 We can also explore the pivot table in detail now:
 

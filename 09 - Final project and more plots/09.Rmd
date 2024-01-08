@@ -46,10 +46,10 @@ country_data <- tibble(countrycode = c("BRA", "CHN", "FRA", "RUS", "EGY", "USA",
 Now we want to bring those things together. We need to keep the original data in its original state. Otherwise the plotting might become difficult. Therefore we simply join our data with a left join to keep all countries:
 
 ```{r}
-map_data <- left_join(countries_sf, country_data, by = c("iso_a3" = "countrycode"))
+map_data <- left_join(countries_sf, country_data, by = c("iso_a3_eh" = "countrycode"))
 ```
 
-**Exercise: ** What is the difference between an inner join and a left join?
+**Exercise:** What is the difference between an inner join and a left join?
 
 To map all known values, we want to fill the country with the value. In case no data was found, a `NA` will be used.
 

@@ -188,7 +188,7 @@ To plot these data according with the `sf_countries`, we need to add the pivot t
 
 ```{r}
 wdi_data_extra_sf <- inner_join(countries_sf, wdi_data_extra,
-                                by = c("iso_a3" = "Country Code"))
+                                by = c("iso_a3_eh" = "Country Code"))
 ```
 
 The final data `wdi_data_extra_sf` is the final result for data wrangling and ready to plot all kinds of features on a world map:

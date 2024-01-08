@@ -424,7 +424,7 @@ ok. If you want to publish articles, you should be more specific here.
 
 ``` r
 wdi_data_extra_sf <- inner_join(countries_sf, wdi_data_extra,
-                                by = c("iso_a3" = "Country Code"))
+                                by = c("iso_a3_eh" = "Country Code"))
 ```
 
 The final data `wdi_data_extra_sf` is the final result for data

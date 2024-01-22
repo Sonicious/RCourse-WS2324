@@ -188,60 +188,6 @@ gives a very rough introduction.
 code about the iris data set. You can use either `ioslides` or
 `xaringan`.
 
-## Dashboards
-
-Next to many more format ideas which are provided by R Markdown are
-Dashboards. These are small HTML widgets which provide a nice overview
-of data and plots. We will use the `flexdashboard` package. But there
-are even more extensions and packages.
-
-    # install from CRAN
-    install.packages("flexdashboard")
-
-Please consult the file `Dashboard.Rmd` for a small example for the iris
-dataset.
-
-Usually Dashboards are for web services and should contain active
-real-time elements. But they are also useful for presenting data for
-upcoming users. Therefore This is just a very small showcase, what is
-possible with R Markdown flexdashboards.
-
-For showing big samples of dataframes or tibbles, it is recommended to
-use the `knitr::kable` function to have a nicer output. Also one should
-not print all values, but only a sample in case of Markdown documents or
-PDF. In case of dynamic outputs like dashboards or pure HTML documents,
-a scrollbar is inserted automatically.
-
-``` r
-data %>% sample_n(10) %>% knitr::kable()
-```
-
-| Sepal.Length | Sepal.Width | Petal.Length | Petal.Width | Species    |
-|-------------:|------------:|-------------:|------------:|:-----------|
-|          6.8 |         2.8 |          4.8 |         1.4 | versicolor |
-|          6.1 |         2.8 |          4.7 |         1.2 | versicolor |
-|          4.7 |         3.2 |          1.3 |         0.2 | setosa     |
-|          5.9 |         3.0 |          5.1 |         1.8 | virginica  |
-|          6.3 |         2.5 |          5.0 |         1.9 | virginica  |
-|          7.1 |         3.0 |          5.9 |         2.1 | virginica  |
-|          4.9 |         3.1 |          1.5 |         0.1 | setosa     |
-|          5.7 |         3.0 |          4.2 |         1.2 | versicolor |
-|          5.6 |         2.7 |          4.2 |         1.3 | versicolor |
-|          4.6 |         3.6 |          1.0 |         0.2 | setosa     |
-
-The icons which are used in the dashboard, are based on the icons from
-[Font Awesome](https://fontawesome.com/). You can pick them there and
-use them in the dashboard.
-
-Usually Dashboards are used in combination with the `Shiny` package. We
-will have a small introduction into this later in our lectures.
-
-**Exercise:** Construct a basic dashboard about WDI values with 1 page
-and 3 panes. Choose an index and show a world map with projected index
-values in a specific year. In a second pane plot the time series for a
-specific country. Finally, describe in a few lines, what is shown in the
-plots in the third pane.
-
 ## Further Reading
 
 There are many different and very good resources out in the internet.
